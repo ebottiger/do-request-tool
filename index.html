@@ -19,11 +19,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'DM Sans', sans-serif; background: var(--grey); color: var(--dark); min-height: 100vh; }
 
-header {
-  background: var(--dark); height: 64px; padding: 0 40px;
-  display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 3px solid var(--pink);
-}
+header { background: var(--dark); height: 64px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--pink); }
 .logo { display: flex; align-items: center; gap: 12px; }
 .dots { display: flex; gap: 4px; align-items: center; }
 .dots span { width: 10px; height: 10px; border-radius: 50%; display: block; }
@@ -38,104 +34,45 @@ h1 { font-family: 'Libre Baskerville', serif; font-size: 28px; color: var(--pink
 .subtitle { color: var(--mid); font-size: 14px; margin-bottom: 36px; }
 
 .card { background: var(--white); border-radius: 10px; padding: 32px; margin-bottom: 24px; box-shadow: 0 1px 4px rgba(36,40,43,.08); }
-.card-title {
-  font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--pink); margin-bottom: 20px;
-  display: flex; align-items: center; gap: 8px;
-}
+.card-title { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--pink); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
 .card-title::after { content: ''; flex: 1; height: 1px; background: var(--grey); }
 
-/* Template download banner */
-.template-banner {
-  background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fb 100%);
-  border: 1.5px solid #c2d8f5;
-  border-radius: 10px;
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-}
-.template-icon {
-  width: 48px; height: 48px; flex-shrink: 0;
-  background: var(--blue); border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-}
+.template-banner { background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fb 100%); border: 1.5px solid #c2d8f5; border-radius: 10px; padding: 20px 24px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
+.template-icon { width: 48px; height: 48px; flex-shrink: 0; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
 .template-icon svg { width: 24px; height: 24px; stroke: #fff; fill: none; }
 .template-text { flex: 1; min-width: 200px; }
 .template-text strong { display: block; font-size: 15px; color: var(--dark); margin-bottom: 4px; }
 .template-text p { font-size: 13px; color: var(--mid); line-height: 1.5; }
-.btn-download {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 10px 20px; background: var(--blue); color: #fff;
-  border-radius: 7px; font-family: 'DM Sans', sans-serif;
-  font-size: 13px; font-weight: 500; text-decoration: none;
-  transition: background .15s; white-space: nowrap;
-  border: none; cursor: pointer;
-}
+.btn-download { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--blue); color: #fff; border-radius: 7px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; text-decoration: none; transition: background .15s; white-space: nowrap; border: none; cursor: pointer; }
 .btn-download:hover { background: #163d6e; }
 .btn-download svg { width: 15px; height: 15px; stroke: #fff; fill: none; }
 
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-group { display: flex; flex-direction: column; gap: 6px; }
-.form-group.full { grid-column: 1 / -1; }
 label { font-size: 12px; font-weight: 500; letter-spacing: .03em; }
-.text-input {
-  border: 1.5px solid var(--grey); border-radius: 6px;
-  padding: 10px 14px; font-family: 'DM Sans', sans-serif;
-  font-size: 14px; color: var(--dark); background: #FAFBFC;
-  transition: border-color .15s; outline: none; width: 100%;
-}
+.text-input { border: 1.5px solid var(--grey); border-radius: 6px; padding: 10px 14px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--dark); background: #FAFBFC; transition: border-color .15s; outline: none; width: 100%; }
 .text-input:focus { border-color: var(--pink); background: var(--white); }
 
-/* Paste zone */
-.paste-hint {
-  background: #FDF7FA; border: 1.5px solid #F0C4D8; border-radius: 8px;
-  padding: 14px 18px; margin-bottom: 16px; font-size: 13px; color: var(--dark);
-  line-height: 1.6;
-}
+.paste-hint { background: #FDF7FA; border: 1.5px solid #F0C4D8; border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; font-size: 13px; color: var(--dark); line-height: 1.6; }
 .paste-hint strong { color: var(--pink); }
 .paste-hint ol { padding-left: 18px; margin-top: 6px; }
 .paste-hint li { margin-bottom: 3px; }
-
-.paste-area {
-  width: 100%; min-height: 140px;
-  border: 2px dashed #C8D0D8; border-radius: 10px;
-  padding: 16px; font-family: 'DM Sans', sans-serif;
-  font-size: 13px; color: var(--dark); background: #FAFBFC;
-  resize: vertical; outline: none; transition: border-color .2s;
-  line-height: 1.5;
-}
+.paste-area { width: 100%; min-height: 140px; border: 2px dashed #C8D0D8; border-radius: 10px; padding: 16px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--dark); background: #FAFBFC; resize: vertical; outline: none; transition: border-color .2s; line-height: 1.5; }
 .paste-area:focus { border-color: var(--pink); background: var(--white); }
 .paste-area::placeholder { color: var(--mid); }
 
-/* Mapping */
 #mapping-section { display: none; }
 .mapping-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.mapping-row {
-  display: flex; align-items: center; gap: 10px;
-  background: var(--grey); border-radius: 8px; padding: 10px 14px;
-}
+.mapping-row { display: flex; align-items: center; gap: 10px; background: var(--grey); border-radius: 8px; padding: 10px 14px; }
 .mapping-lbl { font-size: 12px; font-weight: 500; flex: 1; white-space: nowrap; }
-.mapping-row select {
-  border: 1.5px solid #C8D0D8; border-radius: 6px; padding: 6px 10px;
-  font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--dark);
-  background: var(--white); outline: none; flex: 1.2; cursor: pointer;
-}
+.mapping-row select { border: 1.5px solid #C8D0D8; border-radius: 6px; padding: 6px 10px; font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--dark); background: var(--white); outline: none; flex: 1.2; cursor: pointer; }
 .mapping-row select:focus { border-color: var(--pink); }
 .matched { border-color: #a8d5a2 !important; background: #f2fbf2 !important; }
-.fixed-input {
-  border: 1.5px solid var(--pink); border-radius: 6px; padding: 6px 10px;
-  font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--dark);
-  background: #fff8fc; outline: none; flex: 1.2;
-  display: none;
-}
+.fixed-input { border: 1.5px solid var(--pink); border-radius: 6px; padding: 6px 10px; font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--dark); background: #fff8fc; outline: none; flex: 1.2; display: none; }
 .fixed-input::placeholder { color: #c8a0b8; font-style: italic; }
 .fixed-input.visible { display: block; }
-.mapping-row.has-fixed select { flex: 0 0 auto; width: 130px; }
+.mapping-row.has-fixed select { flex: 0 0 auto; width: 140px; }
 
-/* Preview */
 #preview-section { display: none; }
 .preview-scroll { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 12px; }
@@ -144,13 +81,8 @@ td { padding: 8px 12px; border-bottom: 1px solid var(--grey); white-space: nowra
 tr:nth-child(even) td { background: #F7F9FB; }
 .row-count { font-size: 12px; color: var(--mid); margin-top: 10px; }
 
-/* Buttons */
 .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
-.btn {
-  padding: 11px 24px; border-radius: 7px; border: none;
-  cursor: pointer; font-family: 'DM Sans', sans-serif;
-  font-size: 14px; font-weight: 500; transition: all .15s; letter-spacing: .02em;
-}
+.btn { padding: 11px 24px; border-radius: 7px; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; transition: all .15s; letter-spacing: .02em; }
 .btn-primary { background: var(--pink); color: #fff; }
 .btn-primary:hover { background: #a8155a; transform: translateY(-1px); }
 .btn-secondary { background: var(--grey); color: var(--dark); }
@@ -158,45 +90,18 @@ tr:nth-child(even) td { background: #F7F9FB; }
 .btn-outline { background: transparent; color: var(--pink); border: 1.5px solid var(--pink); }
 .btn-outline:hover { background: #FDF0F6; }
 
-/* Email */
 #email-section { display: none; }
-.meta-bar {
-  background: var(--grey); border-radius: 7px; padding: 12px 16px;
-  font-size: 13px; margin-bottom: 12px;
-  display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap;
-}
+.meta-bar { background: var(--grey); border-radius: 7px; padding: 12px 16px; font-size: 13px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
 .meta-bar strong { color: var(--dark); white-space: nowrap; }
 .meta-bar span { color: var(--blue); word-break: break-word; }
-.email-body {
-  background: #FAFBFC; border: 1.5px solid var(--grey); border-radius: 8px;
-  padding: 24px 28px; font-size: 14px; line-height: 1.8;
-  font-family: 'DM Sans', sans-serif; color: var(--dark);
-}
+.email-body { background: #FAFBFC; border: 1.5px solid var(--grey); border-radius: 8px; padding: 24px 28px; font-size: 14px; line-height: 1.8; font-family: 'DM Sans', sans-serif; color: var(--dark); }
 .email-prose { white-space: pre-wrap; display: block; }
-.session-block {
-  border-left: 3px solid var(--pink); padding: 10px 16px;
-  margin: 16px 0; background: #FDF7FA; border-radius: 0 6px 6px 0;
-  white-space: pre; font-size: 13.5px; display: block;
-}
+.session-block { border-left: 3px solid var(--pink); padding: 10px 16px; margin: 16px 0; background: #FDF7FA; border-radius: 0 6px 6px 0; white-space: pre; font-size: 13.5px; display: block; }
 
-#toast {
-  position: fixed; bottom: 32px; right: 32px;
-  background: var(--dark); color: #fff;
-  padding: 12px 20px; border-radius: 8px; font-size: 13px; font-weight: 500;
-  box-shadow: 0 4px 20px rgba(0,0,0,.2);
-  transform: translateY(80px); opacity: 0;
-  transition: all .3s ease; z-index: 999;
-  border-left: 4px solid var(--pink);
-}
+#toast { position: fixed; bottom: 32px; right: 32px; background: var(--dark); color: #fff; padding: 12px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; box-shadow: 0 4px 20px rgba(0,0,0,.2); transform: translateY(80px); opacity: 0; transition: all .3s ease; z-index: 999; border-left: 4px solid var(--pink); }
 #toast.show { transform: translateY(0); opacity: 1; }
 
-@media (max-width: 640px) {
-  .form-grid, .mapping-grid { grid-template-columns: 1fr; }
-  .form-group.full { grid-column: 1; }
-  header { padding: 0 20px; }
-  main { padding: 24px 16px 60px; }
-  .template-banner { flex-direction: column; }
-}
+@media (max-width: 640px) { .form-grid, .mapping-grid { grid-template-columns: 1fr; } header { padding: 0 20px; } main { padding: 24px 16px 60px; } }
 </style>
 </head>
 <body>
@@ -211,90 +116,57 @@ tr:nth-child(even) td { background: #F7F9FB; }
 
 <main>
   <h1>Digital Operator Request</h1>
-  <p class="subtitle">Generate a ready-to-send DO request email for <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abc4dbd886d8dedbdbc4d9dfebc9dfd885c8c4c6">[email&#160;protected]</a> from your program data.</p>
+  <p class="subtitle">Generate a ready-to-send DO request email for ops-support@bts.com from your program data.</p>
 
-  <!-- Template Download Banner -->
   <div class="template-banner">
     <div class="template-icon">
-      <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <line x1="12" y1="18" x2="12" y2="12"/>
-        <polyline points="9 15 12 18 15 15"/>
-      </svg>
+      <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
     </div>
     <div class="template-text">
       <strong>BTS DO Request Excel Template</strong>
-      <p>Download the official template with all required columns pre-labeled, fill it in, then paste your data below &mdash; or use your own Excel file as long as it has the same fields.</p>
+      <p>Download the official template with all required columns pre-labeled, fill it in, then paste your data below &mdash; or use your own Excel as long as it has the same fields.</p>
     </div>
     <a id="templateDownload" class="btn-download" download="DO_Request_Template.xlsx">
-      <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-        <polyline points="7 10 12 15 17 10"/>
-        <line x1="12" y1="15" x2="12" y2="3"/>
-      </svg>
+      <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Download Template
     </a>
   </div>
 
-  <!-- Step 1 -->
   <div class="card">
     <div class="card-title">Step 1 &mdash; Email Details</div>
     <div class="form-grid">
-      <div class="form-group">
-        <label>Client Name</label>
-        <input class="text-input" type="text" id="clientName" placeholder="e.g. Acme Corp"/>
-      </div>
-      <div class="form-group">
-        <label>Program Name</label>
-        <input class="text-input" type="text" id="programName" placeholder="e.g. Leadership Accelerator"/>
-      </div>
-      <div class="form-group">
-        <label>Cohort Name</label>
-        <input class="text-input" type="text" id="cohortName" placeholder="e.g. Cohort 3"/>
-      </div>
-      <div class="form-group">
-        <label>Date Range (subject line)</label>
-        <input class="text-input" type="text" id="dateRange" placeholder="e.g. June 2&ndash;4, 2025"/>
-      </div>
-      <div class="form-group">
-        <label>Your Name (sign-off)</label>
-        <input class="text-input" type="text" id="senderName" placeholder="e.g. Maria Garcia"/>
-      </div>
+      <div class="form-group"><label>Client Name</label><input class="text-input" type="text" id="clientName" placeholder="e.g. Acme Corp"/></div>
+      <div class="form-group"><label>Program Name</label><input class="text-input" type="text" id="programName" placeholder="e.g. Leadership Accelerator"/></div>
+      <div class="form-group"><label>Cohort Name</label><input class="text-input" type="text" id="cohortName" placeholder="e.g. Cohort 3"/></div>
+      <div class="form-group"><label>Date Range (subject line)</label><input class="text-input" type="text" id="dateRange" placeholder="e.g. June 2&ndash;4, 2025"/></div>
+      <div class="form-group"><label>Your Name (sign-off)</label><input class="text-input" type="text" id="senderName" placeholder="e.g. Maria Garcia"/></div>
     </div>
   </div>
 
-  <!-- Step 2 -->
   <div class="card">
     <div class="card-title">Step 2 &mdash; Paste Your Excel Data</div>
     <div class="paste-hint">
       <strong>How to paste from Excel:</strong>
       <ol>
-        <li>Open your Excel file (the BTS template or your own)</li>
-        <li>Select all data including the header row &mdash; <strong>Ctrl+A</strong> or highlight manually</li>
+        <li>Open your Excel file (BTS template or your own)</li>
+        <li>Select all data including the header row &mdash; <strong>Ctrl+A</strong></li>
         <li>Copy &mdash; <strong>Ctrl+C</strong></li>
         <li>Click in the box below and paste &mdash; <strong>Ctrl+V</strong></li>
         <li>Click <strong>Load Data</strong></li>
       </ol>
     </div>
-    <textarea
-      class="paste-area"
-      id="pasteArea"
-      placeholder="Paste your Excel data here (Ctrl+V)...&#10;&#10;The first row should be your column headers."
-      spellcheck="false"
-    ></textarea>
+    <textarea class="paste-area" id="pasteArea" placeholder="Paste your Excel data here (Ctrl+V)..." spellcheck="false"></textarea>
     <div class="btn-row">
       <button class="btn btn-primary" onclick="parseData()">Load Data</button>
       <button class="btn btn-secondary" onclick="clearPaste()">Clear</button>
     </div>
   </div>
 
-  <!-- Step 3 -->
   <div class="card" id="mapping-section">
     <div class="card-title">Step 3 &mdash; Match Your Columns</div>
     <p style="font-size:13px;color:var(--mid);margin-bottom:18px;">
-      Columns from your Excel are matched automatically to the email fields below. 
-      <strong style="color:var(--dark)">Green dropdowns</strong> were matched automatically &mdash; adjust any that need correcting, and set unused fields to &ldquo;&mdash; skip &mdash;&rdquo;.
+      Columns from your Excel are matched automatically. <strong style="color:var(--dark)">Green dropdowns</strong> were auto-matched.
+      For any field that is the same across every row, choose <strong style="color:var(--pink)">&#x270F; Same for all rows</strong> and type the value.
     </p>
     <div class="mapping-grid" id="mappingGrid"></div>
     <div class="btn-row">
@@ -302,7 +174,6 @@ tr:nth-child(even) td { background: #F7F9FB; }
     </div>
   </div>
 
-  <!-- Preview -->
   <div class="card" id="preview-section">
     <div class="card-title">Data Preview</div>
     <div class="preview-scroll"><table id="previewTable"></table></div>
@@ -312,10 +183,9 @@ tr:nth-child(even) td { background: #F7F9FB; }
     </div>
   </div>
 
-  <!-- Email -->
   <div class="card" id="email-section">
     <div class="card-title">Email Draft &mdash; Ready to Send</div>
-    <div class="meta-bar"><strong>To:</strong> <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="711e01025c020401011e0305311305025f121e1c">[email&#160;protected]</a></span></div>
+    <div class="meta-bar"><strong>To:</strong> <span>ops-support@bts.com</span></div>
     <div class="meta-bar"><strong>Subject:</strong> <span id="emailSubject"></span></div>
     <div class="email-body" id="emailBody"></div>
     <div class="btn-row">
@@ -328,13 +198,14 @@ tr:nth-child(even) td { background: #F7F9FB; }
 
 <div id="toast"></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ── Embed template file for download ──────────────────────────────────
+<script>
+// ============================================================
+// DATA & CONSTANTS
+// ============================================================
 const TEMPLATE_B64 = "UEsDBBQABgAIAAAAIQALY5msfAEAADgFAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsVMtOwzAQvCPxD5GvKHHhgBBqyoHHEZBaPsDEm8Rq/JB3gfTv2bgPIRRaVfSSKF7vzOxkd6d3ve2yT4hovCvFZTERGbjKa+OaUrwtnvIbkSEpp1XnHZRiBSjuZudn08UqAGac7bAULVG4lRKrFqzCwgdwHKl9tIr4MzYyqGqpGpBXk8m1rLwjcJTTgCFm0weo1UdH2WPPx2sl78aJ7H59b6AqhQqhM5UiFio/nf5Fkvu6NhVoX31Yhi4wRFAaWwCyXRGiYcY4ByIuDIUc5QRb/+I0dtDc50NkPCdCh8cJ3ThRcGYqBlsT8ILt+oNhiPztxCbvhX9hNBqyVxXpWVn2S/ad/PJx+e79stgPcqydydbCKuO2uvfwp8so0+vyxEKG+hLwAR3EfQkyPf8vIcEcIERadYCntj2BHmJuVQQ9J+745uQCfmLv08Fj+Bp9QJ70CMe7sB2RITsPDASRDOyGZKzZdoy8Jv5tOwx7SIMe4ZZp782+AQAA//8DAFBLAwQUAAYACAAAACEAvvl5uwUBAADcAgAACwAIAl9yZWxzLy5yZWxzIKIEAiigAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKzS3WrDIBQH8PvB3kG8b0y7McZo0psy6N0Y3QOc6kkiiR7R0y19+8lgH4GsDNZL9fj3p8f1ZnSDeMWYLPlKLotSCvSajPVtJV/2j4t7KRKDNzCQx0qeMMlNfX21fsYBOG9KnQ1J5BSfKtkxhwelku7QQSoooM8rDUUHnIexVQF0Dy2qVVneqfgzQ9aTTLEzlYw7cyPF/hTyyf/JVg4ZDDAoTREXIWZZZJvvIvYQW+RKGtJPeTp9VBRZLdU8aHVZEHdHd/BghxnK11qBrvnNs/y7h5rGatySPjr0PNMDNa34Jo2DeqPYH4j6c29ze0kLjozeoDnfLgjhU6Qmf7J+BwAA//8DAFBLAwQUAAYACAAAACEA+qVRDJEDAADxCAAADwAAAHhsL3dvcmtib29rLnhtbKxVbW+jOBD+ftL9B8R3ik14CajpKgTQRWr3qjTb7kmRKhecYBUwZ0yTqtr/fmMI6UtWp1z3ImJje/z4mZlnzPmXXVloT1Q0jFcTHZ8hXaNVyjNWbSb6t2VijHWtkaTKSMErOtGfaaN/ufj9t/MtF48PnD9qAFA1Ez2Xsg5Ms0lzWpLmjNe0gpU1FyWRMBQbs6kFJVmTUyrLwrQQcs2SsErvEQJxCgZfr1lKI562Ja1kDyJoQSTQb3JWNwNamZ4CVxLx2NZGyssaIB5YweRzB6prZRrMNxUX5KEAt3fY0XYCHhf+GEFjDSfB0tFRJUsFb/hangG02ZM+8h8jE+N3Idgdx+A0JNsU9ImpHB5YCfeTrNwDlvsKhtEvo2GQVqeVAIL3STTnwM3SL87XrKC3vXQ1UtdfSakyVehaQRoZZ0zSbKJ7MORb+m5CtHXYsgJWLX9sWbp5cZDztdAyuiZtIZcg5AEeDJE1QkhZgjCmhaSiIpLOeCVBh3u/flVzHfYs56BwbUH/bpmgUFigL/AVWpIG5KG5JjLXWlFM9Fmw+taA+6u4eCZnIZeSbahYhXz3YWY612Y5KWuQxyr6s4OGeGgxVF+xeiNjclwz/0HIJFXRMSE8vQv9+8dQgSciGMR6LYUG7/PoEhJ2Q54gfSCSbF/dc8gPHt1XqQjw/UsSupEdRdiYeqPQsBPPM/zQ94xREoeJ6yAHhfYPcEa4QcpJK/O9MhT0RLdBBkdLV2Q3rGAUtCx7pfGC9j9D9R+aYe2HcljdgbeMbptXDamhtrtjVca3E93AFjj1/H647RbvWCZzJUJkg0k/9wdlmxwYY8dT+6BWFLOJ/jKNxlbso9BwvAQCMHN8w7ccz7DiseNG1ii2onHHyHxDqbttgVrXa1VXITfqBsZwrau+C7KuiUCdIeYZ7pI4bEtJkUJFqK4z9DGyfGVBd/KykV0PYmRAD9to6iHfNlA8cgx77FvG2B5ZxsyOrNjx4igOHZUf9bUI/o87s6uJYPgMKZY5EXIpSPoIH68FXYekAUH1DgHft2RDZxyiEVC0E5wYNvaREYaubThRMnI8HM1iJ3klq9xff/LGGpvdbkpkC9WsCrkbB6pN9rOHyXU/sc/Tu9oLFpGK+373vxnegPcFPdE4uT3RcPb1anl1ou1lvLy/S041nl6F0fR0++liMf1rGX8fjjB/GlCzS7hqO5mag0wu/gEAAP//AwBQSwMEFAAGAAgAAAAhAIE+lJfzAAAAugIAABoACAF4bC9fcmVscy93b3JrYm9vay54bWwucmVscyCiBAEooAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKxSTUvEMBC9C/6HMHebdhUR2XQvIuxV6w8IybQp2yYhM3703xsqul1Y1ksvA2+Gee/Nx3b3NQ7iAxP1wSuoihIEehNs7zsFb83zzQMIYu2tHoJHBRMS7Orrq+0LDppzE7k+ksgsnhQ45vgoJRmHo6YiRPS50oY0as4wdTJqc9Adyk1Z3su05ID6hFPsrYK0t7cgmilm5f+5Q9v2Bp+CeR/R8xkJSTwNeQDR6NQhK/jBRfYI8rz8Zk15zmvBo/oM5RyrSx6qNT18hnQgh8hHH38pknPlopm7Ve/hdEL7yim/2/Isy/TvZuTJx9XfAAAA//8DAFBLAwQUAAYACAAAACEAuc7F08kCAAD6BgAAGAAAAHhsL3dvcmtzaGVldHMvc2hlZXQxLnhtbJyVW2/aMBiG7yftP1i+JycIhAhSMWhWulWa1p1ujeOA1STObHOopv33fXYKLKQXqBIQJ3l5voPfL5ncHMoC7ZhUXFRT7DseRqyiIuPVeoq/f0t7EUZKkyojhajYFD8zhW+S9+8meyGf1IYxjYBQqSneaF3HrqvohpVEOaJmFdzJhSyJhlO5dlUtGcnsn8rCDTxv6JaEV7ghxPIahshzTtlC0G3JKt1AJCuIhvzVhtfqSCvpNbiSyKdt3aOirAGx4gXXzxaKUUnj5boSkqwKqPvgDwhFBwmfAL79Yxh7vROp5FQKJXLtANltcu6WP3bHLqEnUrf+qzD+wJVsx80GnlHB21LywxMrOMP6b4QNTzDTLhlveTbFf27TNJoFt15vPlwseoNFOOuN59G8l3qjdOSPh/N+mv7FySTjsMOmKiRZPsUzP37wsZtMrH9+cLZX/62RJqtHVjCqGcTwMTL2XAnxZIRLuOQBUVmBIarfR+avdGGp7gmbTM7rY4jUuviLRBnLybbQX8X+jvH1RkOsEGoz5oiz5wVTFFwJ0ZwgNLlSUQACflHJzXiBq8ihyY9negMrz4nCcDCMRoBZMaVTbpgY0a3Sovz5onphNRTYGUuB4765HwycIAr9cAhRr6XAllgKHM+Ua3Nxm8JszxZEk2QixR6BgSFzVRPzOPBjH9CwgDSbYpomWo1t3Mg06bXe9WGvqKHNDM7+AZqi4Oou8SbuDnaIvig+dBV+WzHvKoK2AgxwGaXfVtx2FYO2Iu0qwrbiY1cxbCvuuopRW7HsKqK24r6rGLcVn17p2EVTP78iuegqjOJlz/xzW11ww3GMGnvUZM0eiFzzSqGC5XZERhjJZoY8B9Za1GZw7CAIDeY/nm3gpcHADZ4DhsqF0McTGDDDfWR6WyMhOYyefQ9McS2kloRriBCbh45cZs2Un95ayT8AAAD//wMAUEsDBBQABgAIAAAAIQD2YLRBuAcAABEiAAATAAAAeGwvdGhlbWUvdGhlbWUxLnhtbOxazY8btxW/B8j/QMxd1szoe2E50Kc39u564ZVd5EhJlIZeznBAUrsrFAEK59RLgQJp0UuB3nooigZogAa55I8xYCNN/4g8ckaa4YqKvf5AkmJ3LzPU7z3+5r3HxzePc/eTq5ihCyIk5UnXC+74HiLJjM9psux6TybjSttDUuFkjhlPSNdbE+l9cu/jj+7iAxWRmCCQT+QB7nqRUulBtSpnMIzlHZ6SBH5bcBFjBbdiWZ0LfAl6Y1YNfb9ZjTFNPJTgGNQ+WizojKCJVund2ygfMbhNlNQDMybOtGpiSRjs/DzQCLmWAybQBWZdD+aZ88sJuVIeYlgq+KHr+ebPq967W8UHuRBTe2RLcmPzl8vlAvPz0MwpltPtpP4obNeDrX4DYGoXN2rr/60+A8CzGTxpxqWsM2g0/XaYY0ug7NKhu9MKaja+pL+2wznoNPth3dJvQJn++u4zjjujYcPCG1CGb+zge37Y79QsvAFl+OYOvj7qtcKRhTegiNHkfBfdbLXbzRy9hSw4O3TCO82m3xrm8AIF0bCNLj3FgidqX6zF+BkXYwBoIMOKJkitU7LAM4jiXqq4REMqU4bXHkpxwiUM+2EQQOjV/XD7byyODwguSWtewETuDGk+SM4ETVXXewBavRLk5TffvHj+9Yvn/3nxxRcvnv8LHdFlpDJVltwhTpZluR/+/sf//fV36L///tsPX/7JjZdl/Kt//v7Vt9/9lHpYaoUpXv75q1dff/XyL3/4/h9fOrT3BJ6W4RMaE4lOyCV6zGN4QGMKmz+ZiptJTCJMLQkcgW6H6pGKLODJGjMXrk9sEz4VkGVcwPurZxbXs0isFHXM/DCKLeAx56zPhdMAD/VcJQtPVsnSPblYlXGPMb5wzT3AieXg0SqF9EpdKgcRsWieMpwovCQJUUj/xs8JcTzdZ5Radj2mM8ElXyj0GUV9TJ0mmdCpFUiF0CGNwS9rF0FwtWWb46eoz5nrqYfkwkbCssDMQX5CmGXG+3ilcOxSOcExKxv8CKvIRfJsLWZl3Egq8PSSMI5GcyKlS+aRgOctOf0hhsTmdPsxW8c2Uih67tJ5hDkvI4f8fBDhOHVypklUxn4qzyFEMTrlygU/5vYK0ffgB5zsdfdTSix3vz4RPIEEV6ZUBIj+ZSUcvrxPuL0e12yBiSvL9ERsZdeeoM7o6K+WVmgfEcLwJZ4Tgp586mDQ56ll84L0gwiyyiFxBdYDbMeqvk+IhDJJ1zW7KfKISitkz8iS7+FzvL6WeNY4ibHYp/kEvG6F7lTAYnRQeMRm52XgCYXyD+LFaZRHEnSUgnu0T+tphK29S99Ld7yuheW/N1ljsC6f3XRdggy5sQwk9je2zQQza4IiYCaYoiNXugURy/2FiN5XjdjKKbewF23hBiiMrHonpsnrip8TLAS//Hlqnw9W9bgVv0u9sy+vHF6rcvbhfoW1zRCvklMC28lu4rotbW5LG+//vrTZt5ZvC5rbgua2oHG9gn2QgqaoYaC8KVo9pvET7+37LChjZ2rNyJE0rR8JrzXzMQyanpRpTG77gGkEl/p5YAILtxTYyCDB1W+ois4inEJ/KDBdzKXMVS8lSrmEtpEZNv1Uck23aT6t4mM+z9qdpr/kZyaUWBXjfgMaT9k4tKpUhm628kHNb0PdsF2aVuuGgJa9CYnSZDaJmoNEazP4GhK6c/Z+WHQcLNpa/cZVO6YAaluvwHs3grf1rteoZ4ygIwc1+lz7KXP1xrvaOe/V0/uMycoRAK3FXU93NNe9j6efLgu1N/C0RcI4JQsrm4TxlSnwZARvw3l0lvvuPxVwN/V1p3CpRU+bYrMaChqt9ofwtU4i13IDS8qZgiXoEtZ4CIvOQzOcdr0F9I3hMk4heKR+98JsCYcvMyWyFf82qSUVUg2xjDKLm6yT+SemigjEaNz19PNvw4ElJolk5DqwdH+p5EK94H5p5MDrtpfJYkFmquz30oi2dHYLKT5LFs5fjfjbg7UkX4G7z6L5JZqylXiMIcQarUB7d04lHB8EmavnFM7DtpmsiL9rO1Oe/a1DriIfY5ZGON9Sytk8g5sNZUvH3G1tULrLnxkMumvC6VLvsO+87b5+r9aWK/bHTrFpWmlFb5vubPrhdvkSq2IXtVhluft6zu1skh0EqnObePe9v0StmMyiphnv5mGdtPNRm9p7rAhKu09zj922m4TTEm+79YPc9ajVO8SmsDSBbw7Oy2fbfPoMkscQThFXLDvtZgncmdIyPRXGt1M+X+eXTGaJJvO5LkqzVP6YLBCdX3W90FU55ofHeTXAEkCbmhdW2FbQWe3Zgnqzy0WzBbsVzsrYa/WqLbyV2ByzboVNa9FFW11tTtR1rW5m1g7LntqkYWMpuNq1IrTJBYbSOTvMzXIv5JkrlVfacIVWgna93/qNXn0QNgYVv90YVeq1ul9pN3q1Sq/RqAWjRuAP++HnQE9FcdDIvnwYw2kQW+ffP5jxnW8g4s2B150Zj6vcfONQNd4330AE4f5vIMCRQCscBfWwFw4qg2HQrNTDYbPSbtV6lUHYHIY92LSb497nHrow4KA/HI7HjbDSHACu7vcalV6/Nqg026N+OA5G9aEP4Hz7uYK3GJ1zc1vApeF170cAAAD//wMAUEsDBBQABgAIAAAAIQBLZNQC9QIAAL0HAAANAAAAeGwvc3R5bGVzLnhtbMRVW2vbMBR+H+w/CL27viTOkmC7NE0Nha4M0sJeFVt2RHUxspI6G/vvO7KdxKXtLtnDCETS0dGn75xP5zi6bARHO6prpmSM/QsPIyozlTNZxvjxIXWmGNWGyJxwJWmM97TGl8nHD1Ft9pyuNpQaBBCyjvHGmGruunW2oYLUF6qiEnYKpQUxsNSlW1eakry2hwR3A8+buIIwiTuEucj+BEQQ/bStnEyJihi2ZpyZfYuFkcjmt6VUmqw5UG38MclQ4090gBp9uKS1vrpHsEyrWhXmAnBdVRQso6/pztyZS7ITEiCfh+SHrhe8iL3RZyKNXU13zMqHk6hQ0tQoU1tpYjwCojYF8yepnmVqt0Dh3iuJ6m9oRzhYfOwmUaa40siAdJC51iKJoJ3HVWVUje6J1urZ+hZEML7v9gJraCXvnQUDAazRtWQ6Skm0tl7/7cKWZBehLtcxTlN/DL+RpXkKc0VLRdHj7Zsh9tG0Qw1RMc6PiQ5sTsGQRPAiDdUyhQXq5w/7CjIqoXi6pLR+v/EuNdn7QTg44LYXQh6VzqFYDxJbNTtTEnFaGIhHs3JjR6Mq+F8rY+BBJ1HOSKkk4VaYw4l+AuFklPOVLeivxQvspkByK1JhbvMYQ2uwkh6mEEg/7fC6hcUfonXYA9gRUP57WNQUR/z3TgfA721Sx9OIVBXf21LoH/l7WP4ZWG3cEOkgnS+SeUwLsm8uxve2M3Io0j40tN4ybph8I5GAmTcnaTz7Moztcq1ox1tAoZwWZMvNw3Ezxqf5Z5qzrYA89V5f2E6ZFiLGp/mdfUH+xN5BG3NXQxHDiLaaxfj7zeLTbHmTBs7UW0yd8YiGzixcLJ1wfL1YLtOZF3jXPwa99h86bftpgMfij+c1h36s+2B78quTLcaDRUe/rR2gPeQ+CybeVeh7TjryfGc8IVNnOhmFThr6wXIyXtyEaTjgHp7ZkT3X97vebsmHc8ME5UwetDooNLSCSLD8RRDuQQn39N1NfgIAAP//AwBQSwMEFAAGAAgAAAAhAMtpZyQLAQAAAgIAABQAAAB4bC9zaGFyZWRTdHJpbmdzLnhtbHRRTUvDQBC9C/6HYe92q4KIJOnBWvCgLbb+gDGZNivZ2XVnItZf7wZBIW2P8z7mwXvF7Mt38ElJXODSXE6mBojr0DjeleZ1s7i4NSCK3GAXmEqzJzGz6vysEFHIXpbStKrxzlqpW/IokxCJM7MNyaPmM+2sxETYSEukvrNX0+mN9ejYQB161px7baBn99HT/R9QFeKqQqtVCu9UKzzOC6tVYQf0l+Hev1GCsIWISV3tIrLKadV8KcBEDTVjzVNgbcfgHPdjaK05CDbO05h54OYoPmi/c3Nj/TJSQg0JNvt4QK5Jhj3gGQ+DFli7Tt3gHf98oVygaK7kmHHVoQ6b/Lts3rD6AQAA//8DAFBLAwQUAAYACAAAACEAmXHqu1oHAACsJgAAFgAAAGRvY1Byb3BzL3RodW1ibmFpbC5lbWbsmk1sVVUQx+fVIgXUPkoxfhDy2lRA0aBYK0YNr/ZJMNVYRFy5QGyhRUWilUiqSRcs3Bhho2wNkJjUxMREwUTFRDcGFi5MjHHRLtwpSY07Nzi/2zPvDaf39r2+D+OCQ6Zzzpm5M/8z93zMubyciLyqZOXbnMgl176yTeSX9SKFJ5/ZJZKTTzeJ7FadNU6H6vRKkR3tIp1tIltU7svp1R1SPNEuakDuVSooqbmtuWJONmg9r9SW/+43HtsfCN0XlUaCbm+xXW4KRjcWV5XrfWrD+u8vtiW2FIaW6Z09xZVlWXtRyvUelXYo9Srx7FUtaX2rVZYPPmGmc1d47mZ1cluoI7+9Yk+6Ql3DIbc6ne7Ks2J2NHTTVlfx9LDzu0LraTi9L49ho+rTJpbQRf1z+X9kY7PDR8xmZmZg5ViA2caDTKdbMkeIoy/ILGbI7lTKK92hRIwHXJvxm50bghE/Rc0OsqeVRp0d7LEezC7PXVDqkflgCTa9s9LwdafiqhaDhXlaERgO+k2H90/RKZpw06H/mNKIEpgYM3MCTjxsfCaTv5J/VxmHLmeRn5N/iVHT9f6z/GwNfuCxH/q8H9Z6vX4IKOOBx36SYLvxFBvwszf4gcd+6PPjeb4BP4eCH3jshz7vZ7wBP1PBDzz2Q5/3804Dfj4IfuCxH/q8n5MN+DkT/MBjP/R5P2cb8HM++IHHfujzflj/9c5r9hLmNTz2k5y7bl6zb1Xz85yqHNUFfKPyv22T4DktJyubXGGvjMkheV3/FmSfPBU0rrNaIzB6LEkZymcO8bZzqlQqlc/++fn58tlP+NkzIHIJ9PNKW5T8eWYy9Dl/fCE3oYxo5wNKmitcY/O+YPPxFJvIqtncnmJzMNjck2ITWTWbD8r3V2Kc+4LNsRSbyKrZ7JeLB2KbE8Hm8RSbyKrZfEg++j22+W6w+X6KTWTVbA7I2IexzVPB5scpNpFVs/mw/PF5bPNcsPlFik1k1WzukM+mYptfBZs/pthEVs3mI9L1KzYtdyA/tjrP+rwuK1c2/aVyOnJa8hzTTcvbuMegY3nbOW2DoZG8rVp+hC98wNeFGNK2Pq2WzxHyVfDVc44cDDbhsR/6vB9yi3r95EPM4LEf+ryftSHe9YyHd4U5eOyHPu/H3n2tfvw+jZ3l7NnsqbgvKa1V8nu2yZAvtWcPyqlR7pp2DpA7JGNNsWmyajafkH/a/NodDfF7RXmM02TVbA7Jl8fB6dfu5hAvfFHiOwj9Fk9kWWva7lRggNDjPcftZtypGAOFc5hi46HfsCIzrNT/C3z+PtWjWMBzQInvD8QhvvObzqNBl3iZbp/WId1emYahVOrM0xeUyDOsWB7BXjme263UkftEOnLO1qCzVa5j6zEl8A4pGQaPZ33o597q63u0/afSGqUVSnwHySuR76BrRc8JgUaU+pVOKI0HYUG/Xpic8Vg9d42FBWXGZoX5ODs7K71JKbQFvtz2tpqfV8f2LanX1e29L7UP+XOFMWInXoveps0NP4f9vmbfgDhjeB/2DcjuCtiej+4KX1c2t+t3BTeP6qnGdwW/93R3r1u01v2em/ae/R6W9s6xGb9z8gD7VhPm5aJ7yXuqw3PMkTGlu5X8GWcy1mvWGbdfZSPyht4sD6uNl2VSCnq7LCVrnDnPs6z9VUrEgT7WPn3give9emLBVLb572NB7sPYyFWIRVfwyX7LefyT0uGg06md8fhNxr6VNf63VXZE3pLXdDcf0zgUNBIH9e9ReUlbkzKhMZlIWke09WYSD2LSqQQnLhYT2r5uMvqIF/GD23OmzzncyjiS2xFHcrG0OP6gsu6g801KHE1GHpoVx8mMOJbkWY1aQWM8pv9GE2LctcSQ+QURH+acxY24+hja3NHupscRm1n7caNz3dumTrG93nI3xkqZm5tLuPmk38aNzPYV6nYGsRdsUtqg5PcFs2e2lrqr2T3MdNPuaswZ5gb3JvhZbbNGm3FXi7ExfweU8ko2n7OwoQs2ONjgrcTGd22PjXYWNmRgg4MN3kpsfAv32GhnYUMGNjjY4K3Exj7vsdHOwoYMbHCwwVuJbSrCRjsLGzKwwcEGbyU2vtP7uNHOwoYMbHCwwVuJ7UyEjXYWNmRgg4MN3kps5yNstLOwIQMbHGzwVmK7FGGjnYUNGdjgYIO3Eht7u803/F1eApudB4aNNmfCBaVmnwvkyh4b7SxspgsHm7VbhY3c1WOjnYXNdOFgs3arsNnZ7veQLGyma78vsXYzsZHj1ZNTkfP4XCgrX8v6bcUu9VtU4tsFv2u5Rxt9Wsdm1m8D2lWH3JTC82eVTi/j+e1FyZGX5cs++N3BrH6iGR6qxX9HUdptzPz2BjOam+X7HS6Pcbjsa+EO0sw4hzAsyl3J0X0xn/T7nN1/d6wld8VmWu5qvmw+k0t7XZ+7mm75+3To4Bkea/YeFWOjnbXWfMzYB6yAi2ea9X8g/lsFc5j5T/xrXQM8Y3OYZ9qKlTVxi8rY9yj5UP8XAAD//wMAUEsDBBQABgAIAAAAIQA7bTJLwQAAAEIBAAAjAAAAeGwvd29ya3NoZWV0cy9fcmVscy9zaGVldDEueG1sLnJlbHOEj8GKwjAURfcD/kN4e5PWhQxDUzciuFXnA2L62gbbl5D3FP17sxxlwOXlcM/lNpv7PKkbZg6RLNS6AoXkYxdosPB72i2/QbE46twUCS08kGHTLr6aA05OSonHkFgVC7GFUST9GMN+xNmxjgmpkD7m2UmJeTDJ+Ysb0Kyqam3yXwe0L0617yzkfVeDOj1SWf7sjn0fPG6jv85I8s+ESTmQYD6iSDnIRe3ygGJB63f2nmt9DgSmbczL8/YJAAD//wMAUEsDBBQABgAIAAAAIQA0zVCJSwUAAHyEAAAnAAAAeGwvcHJpbnRlclNldHRpbmdzL3ByaW50ZXJTZXR0aW5nczEuYmlu7J1Lb9tGEMdHihEURoEGaD+AUfQQoLAt+ZGH0UP1sBO5ksVIsmOglzIiLRGmSUKkItlFfWl764foByiCHnrorYd+gfaeAj301HPu7X+WUiw/0qRJjADKf2mKyxV3Z/bHmeEKIDy74kpPQhnKnBTEl0RsqYongeyjpSS3ZElWZNXUQ3wf4uo5qcmGWKIlM3Pl6mP5/uvSL5lsRjLy92z4joPje7KbzUoWn1dwVoWUBJvKevWSGQ2hxyz2WVT+QblTaa5Mjl6ubG1/KFb2h5knx99+/OjX/5L8wejL96HttWdcqPJ0jizTSeD/3FkLhtestTaVxDX5NPulFOWm5OUGtjy8Y0Xm4U8rUoYPzeO4jNoGakWc61XzaLmNtmVsN3HMw8cKaFmVrzBiJYj6SdELZKPeqDXr243SujTWm+VqVbYDr+fGWrPsyO01vSNXquut1noDDR23GPYct+e7cSxbYeBKzXU8u3UYudI88JZWl0t2z4mTsL1f9TrdZODq5x0/jONDqfeTkdRCPwllM3ygA9Z1PGkmduCgq9R7nhskduKFgVj1RqtRqLSM4LT3vb7te8khZPcObF9Koe/biSv1LR1uazuyoPu4fxkTaZuBGqpFMUyS8EAlRb4XdFL10etu6LtWP2h305ZyP/LdoeysN1qVUqEqDTcO/b4ZpmxVbuRyQ+wqOOzVQsdNa+lk4ritLfWNDYEqQK7zM4DM5XK/60FXiKw40NHb89rpPE1L0Q4Ct1cPLsn0nxyL7KyUa2Mb3LGsyqM/fn98HfK+uyoSHaWCHdRnUX0X+8/YA4klN9omVeuaeBvJmixii6UtXUTfA0T3WBZw9NCicT/GvodrF3Aeon1RBib6Ozgb4NtFxP8cUN1CLQc7XpQI/fT5kJjPzqmWSTn7kHeIMfSJ4ZiRKugbQcmfsEdo2buA5evVOwfvUr1V+xfVew/62iDhjnTfN1qe6Lx0TuvXzVp1zoP7q+isWv444pzO4LTab57zWftI7VntYh+zz5+hfBmMc4i2L2/PD59qqX441vusdbx52zjLWfVOtexC7yEs3X+uHw7gCwPEiAH8acF4tPr9LtaBVWOrt/HkUh8LRp4Tg4eNiOKakf80cnqQdb6c5pNqs3DBOBq1hk/XqifRyjWRSNeVqX/HuGbyni4i9mi8emj6phpq5NLzyeuaExHSGvWwzYr1s3NxTCNiDs9w9VK10y/M/GJIet78LuaYjpd/SnRSFx0xGo3vXcL48yaKx2bdH4zu2F+xyAxk6TNmXK7jwZTa+BpW/rZ0QKWG3UF/W5r4PLqw5S5aPVyt93lay2/HJyvHl+V0H5QcMFKfnNZS/jxj7Ern58xp7NGYsCabiCgPEE3Gv0RLZiUSIS7pr0YXq+MQltk0Z+NVB0yUhQRIgARIgARIgARIgARIgARIgARIgARIgARIgARIgARIgARIgARIgARIgARIYIoJ6LsrWj669+x3DCzp450D37wHyfcL6A4kQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAIkQAKXQeAb/JNEzVqpOT6Ho/o4v2eaj7GCzKoR/ktigpzlmu/57S1jLgVDIzSZKDU3ZXuKc5q+yN3+JCuCP2NHWj/Jgbx2QW7YKrJ42shxqjlj364ytp8tkzlZc7wWTH5xzUvcBpMqmHRwvCgP8zST+hcAAP//AwBQSwMEFAAGAAgAAAAhAF247v1EAQAAawIAABEACAFkb2NQcm9wcy9jb3JlLnhtbCCiBAEooAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIySX0vDMBTF3wW/Q8l7m/6hQ0LbwdQ9ORCcKL6F5K4LNmlIol2/vWm7zep88DE55/5yziXF8iCb4BOMFa0qURLFKADFWi5UXaLn7Tq8QYF1VHHatApK1INFy+r6qmCasNbAo2k1GCfABp6kLGG6RHvnNMHYsj1IaiPvUF7ctUZS54+mxpqyd1oDTuN4gSU4yqmjeACG+kxERyRnZ6T+MM0I4AxDAxKUsziJEvztdWCk/XNgVGZOKVyvfadj3Dmbs0k8uw9WnI1d10VdNsbw+RP8unl4GquGQg27YoCqgjPCDFDXmuq+6Wmwap0TNZgCz5Rhiw21buMXvhPAV/1v86XBk8ciEx544KORqchJeclu77ZrVKVxugjjLEzzbZqQJCPp4m14/8f8EHW6kMcU/yfmJM9nxBOgKvDF96i+AAAA//8DAFBLAwQUAAYACAAAACEAYUkJEIkBAAARAwAAEAAIAWRvY1Byb3BzL2FwcC54bWwgogQBKKAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACckkFv2zAMhe8D+h8M3Rs53VAMgaxiSFf0sGEBkrZnTaZjobIkiKyR7NePttHU2XrqjeR7ePpESd0cOl/0kNHFUInlohQFBBtrF/aVeNjdXX4VBZIJtfExQCWOgOJGX3xSmxwTZHKABUcErERLlFZSom2hM7hgObDSxNwZ4jbvZWwaZ+E22pcOAsmrsryWcCAINdSX6RQopsRVTx8NraMd+PBxd0wMrNW3lLyzhviW+qezOWJsqPh+sOCVnIuK6bZgX7Kjoy6VnLdqa42HNQfrxngEJd8G6h7MsLSNcRm16mnVg6WYC3R/eG1XovhtEAacSvQmOxOIsQbb1Iy1T0hZP8X8jC0AoZJsmIZjOffOa/dFL0cDF+fGIWACYeEccefIA/5qNibTO8TLOfHIMPFOONuBbzpzzjdemU/6J3sdu2TCkYVT9cOFZ3xIu3hrCF7XeT5U29ZkqPkFTus+DdQ9bzL7IWTdmrCH+tXzvzA8/uP0w/XyelF+LvldZzMl3/6y/gsAAP//AwBQSwECLQAUAAYACAAAACEAC2OZrHwBAAA4BQAAEwAAAAAAAAAAAAAAAAAAAAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLAQItABQABgAIAAAAIQC++Xm7BQEAANwCAAALAAAAAAAAAAAAAAAAALUDAABfcmVscy8ucmVsc1BLAQItABQABgAIAAAAIQD6pVEMkQMAAPEIAAAPAAAAAAAAAAAAAAAAAOsGAAB4bC93b3JrYm9vay54bWxQSwECLQAUAAYACAAAACEAgT6Ul/MAAAC6AgAAGgAAAAAAAAAAAAAAAACpCgAAeGwvX3JlbHMvd29ya2Jvb2sueG1sLnJlbHNQSwECLQAUAAYACAAAACEAuc7F08kCAAD6BgAAGAAAAAAAAAAAAAAAAADcDAAAeGwvd29ya3NoZWV0cy9zaGVldDEueG1sUEsBAi0AFAAGAAgAAAAhAPZgtEG4BwAAESIAABMAAAAAAAAAAAAAAAAA2w8AAHhsL3RoZW1lL3RoZW1lMS54bWxQSwECLQAUAAYACAAAACEAS2TUAvUCAAC9BwAADQAAAAAAAAAAAAAAAADEFwAAeGwvc3R5bGVzLnhtbFBLAQItABQABgAIAAAAIQDLaWckCwEAAAICAAAUAAAAAAAAAAAAAAAAAOQaAAB4bC9zaGFyZWRTdHJpbmdzLnhtbFBLAQItABQABgAIAAAAIQCZceq7WgcAAKwmAAAWAAAAAAAAAAAAAAAAACEcAABkb2NQcm9wcy90aHVtYm5haWwuZW1mUEsBAi0AFAAGAAgAAAAhADttMkvBAAAAQgEAACMAAAAAAAAAAAAAAAAAryMAAHhsL3dvcmtzaGVldHMvX3JlbHMvc2hlZXQxLnhtbC5yZWxzUEsBAi0AFAAGAAgAAAAhADTNUIlLBQAAfIQAACcAAAAAAAAAAAAAAAAAsSQAAHhsL3ByaW50ZXJTZXR0aW5ncy9wcmludGVyU2V0dGluZ3MxLmJpblBLAQItABQABgAIAAAAIQBduO79RAEAAGsCAAARAAAAAAAAAAAAAAAAAEEqAABkb2NQcm9wcy9jb3JlLnhtbFBLAQItABQABgAIAAAAIQBhSQkQiQEAABEDAAAQAAAAAAAAAAAAAAAAALwsAABkb2NQcm9wcy9hcHAueG1sUEsFBgAAAAANAA0AagMAAHsvAAAAAA==";
-const a = document.getElementById('templateDownload');
-a.href = 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,' + TEMPLATE_B64;
+document.getElementById('templateDownload').href =
+  'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,' + TEMPLATE_B64;
 
-// ── Field definitions ─────────────────────────────────────────────────
 const FIELDS = [
   { key: 'projectId',    label: 'Project #' },
   { key: 'participants', label: '# of Participants' },
@@ -351,7 +222,6 @@ const FIELDS = [
   { key: 'platform',     label: 'Platform' },
 ];
 
-// Template exact column names + common variants
 const AUTO_HINTS = {
   projectId:    ['project id','project_id','project #','proj id','proj #','project number'],
   participants: ['number of participants','# of participants','num participants','participants','pax','headcount'],
@@ -363,14 +233,18 @@ const AUTO_HINTS = {
   timezone:     ['timezone','time zone','tz'],
   operatorType: ['operator type','operator'],
   sessionName:  ['session name','session type','session'],
-  facilitator:  ['faciltiator','facilitator','facilitators'],  // note: template has typo "faciltiator"
+  facilitator:  ['faciltiator','facilitator','facilitators'],
   requester:    ['requester name','requested by','requester','requestor'],
   platform:     ['platform'],
 };
 
+const MONTH_ORDER = {january:1,jan:1,february:2,feb:2,march:3,mar:3,april:4,apr:4,may:5,june:6,jun:6,july:7,jul:7,august:8,aug:8,september:9,sep:9,sept:9,october:10,oct:10,november:11,nov:11,december:12,dec:12};
+
 let headers = [], rows = [], mapping = {};
 
-// ── Parse pasted data ─────────────────────────────────────────────────
+// ============================================================
+// PARSE PASTED DATA
+// ============================================================
 function parseData() {
   const raw = document.getElementById('pasteArea').value.trim();
   if (!raw) { showToast('Please paste your Excel data first.'); return; }
@@ -406,7 +280,9 @@ function clearPaste() {
   headers = []; rows = []; mapping = {};
 }
 
-// ── Auto-detect ───────────────────────────────────────────────────────
+// ============================================================
+// COLUMN MAPPING
+// ============================================================
 function autoDetect(key) {
   const hints = AUTO_HINTS[key] || [];
   for (const h of headers) {
@@ -419,7 +295,6 @@ function autoDetect(key) {
 function buildMapping() {
   const grid = document.getElementById('mappingGrid');
   grid.innerHTML = '';
-  const opts = ['__skip__', ...headers];
 
   FIELDS.forEach(f => {
     const auto = autoDetect(f.key);
@@ -436,7 +311,7 @@ function buildMapping() {
     sel.id = 'map_' + f.key;
     if (matched) sel.classList.add('matched');
 
-    // Add "— skip —", "✏ Same for all rows", then column names
+    // Options: skip | same for all | column names
     const skipOpt = document.createElement('option');
     skipOpt.value = '__skip__'; skipOpt.textContent = '— skip —';
     sel.appendChild(skipOpt);
@@ -452,7 +327,7 @@ function buildMapping() {
       sel.appendChild(opt);
     });
 
-    // Text input shown when "Same for all rows" is selected
+    // Text box revealed when "Same for all rows" is chosen
     const fixedInput = document.createElement('input');
     fixedInput.type = 'text';
     fixedInput.id = 'fixed_' + f.key;
@@ -480,10 +355,6 @@ function buildMapping() {
   document.getElementById('mapping-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// mapping values:
-//   null          -> skip field
-//   '__fixed__:X' -> use literal value X for every row
-//   'ColumnName'  -> read from that column
 function readMapping() {
   mapping = {};
   FIELDS.forEach(f => {
@@ -500,7 +371,9 @@ function readMapping() {
   });
 }
 
-// ── Excel time serial fix ─────────────────────────────────────────────
+// ============================================================
+// VALUE RETRIEVAL
+// ============================================================
 function maybeFixTime(val) {
   const n = parseFloat(val);
   if (!isNaN(n) && n > 0 && n < 1 && String(val).includes('.') && !String(val).match(/[a-zA-Z:]/)) {
@@ -517,7 +390,6 @@ function maybeFixTime(val) {
 function getVal(row, key) {
   const col = mapping[key];
   if (!col) return '';
-  // Fixed literal value — same for every row
   if (col.startsWith('__fixed__:')) return col.slice(10);
   const idx = headers.indexOf(col);
   if (idx < 0) return '';
@@ -526,7 +398,37 @@ function getVal(row, key) {
   return raw;
 }
 
-// ── Preview ───────────────────────────────────────────────────────────
+// ============================================================
+// CHRONOLOGICAL SORT
+// ============================================================
+function parseDayNum(d) { return parseInt(String(d).replace(/\D/g, ''), 10) || 0; }
+function parseMonthNum(m) { return MONTH_ORDER[String(m).toLowerCase().trim()] || 0; }
+function parseTimeNum(t) {
+  const s = String(t).trim();
+  const n = parseFloat(s);
+  if (!isNaN(n) && n > 0 && n < 1) return n * 1440;
+  const match = s.match(/(\d{1,2}):(\d{2})\s*(AM|PM)?/i);
+  if (!match) return 0;
+  let h = parseInt(match[1], 10);
+  const min = parseInt(match[2], 10);
+  const ampm = (match[3] || '').toUpperCase();
+  if (ampm === 'PM' && h !== 12) h += 12;
+  if (ampm === 'AM' && h === 12) h = 0;
+  return h * 60 + min;
+}
+
+function getSortKey(row) {
+  const mo = mapping['month']     ? String(row[headers.indexOf(mapping['month'])]     ?? '') : '';
+  const dy = mapping['day']       ? String(row[headers.indexOf(mapping['day'])]       ?? '') : '';
+  const ti = mapping['startTime'] ? String(row[headers.indexOf(mapping['startTime'])] ?? '') : '';
+  return parseMonthNum(mo) * 100000 + parseDayNum(dy) * 1000 + parseTimeNum(ti);
+}
+
+function getSortedRows() { return [...rows].sort((a, b) => getSortKey(a) - getSortKey(b)); }
+
+// ============================================================
+// PREVIEW
+// ============================================================
 function showPreview() {
   readMapping();
   const mapped = FIELDS.filter(f => mapping[f.key] !== null && mapping[f.key] !== undefined);
@@ -546,15 +448,9 @@ function showPreview() {
   document.getElementById('preview-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// ── Sort rows chronologically ─────────────────────────────
-const MONTH_ORDER = {january:1,jan:1,february:2,feb:2,march:3,mar:3,april:4,apr:4,may:5,june:6,jun:6,july:7,jul:7,august:8,aug:8,september:9,sep:9,sept:9,october:10,oct:10,november:11,nov:11,december:12,dec:12};
-function parseDayNum(d){return parseInt(String(d).replace(/\D/g,''),10)||0;}
-function parseMonthNum(m){return MONTH_ORDER[String(m).toLowerCase().trim()]||0;}
-function parseTimeNum(t){const s=String(t).trim();const n=parseFloat(s);if(!isNaN(n)&&n>0&&n<1)return n*1440;const match=s.match(/(\d{1,2}):(\d{2})\s*(AM|PM)?/i);if(!match)return 0;let h=parseInt(match[1],10);const min=parseInt(match[2],10);const ampm=(match[3]||'').toUpperCase();if(ampm==='PM'&&h!==12)h+=12;if(ampm==='AM'&&h===12)h=0;return h*60+min;}
-function getSortKey(row){const mo=mapping['month']?String(row[headers.indexOf(mapping['month'])]??''):'';const dy=mapping['day']?String(row[headers.indexOf(mapping['day'])]??''):'';const ti=mapping['startTime']?String(row[headers.indexOf(mapping['startTime'])]??''):'';return parseMonthNum(mo)*100000+parseDayNum(dy)*1000+parseTimeNum(ti);}
-function getSortedRows(){return[...rows].sort((a,b)=>getSortKey(a)-getSortKey(b));}
-
-// ── Build plain text ──────────────────────────────────────────────────
+// ============================================================
+// BUILD PLAIN TEXT EMAIL
+// ============================================================
 function buildPlain() {
   const client    = document.getElementById('clientName').value.trim()  || '[Client Name]';
   const program   = document.getElementById('programName').value.trim() || '[Program Name]';
@@ -564,31 +460,33 @@ function buildPlain() {
 
   let body = 'Hello Ops,\n\nI hope you are well.\n\nI have some new DO requests for ' + client + ' ' + program + ' ' + cohort + ' happening in ' + dateRange + '.\n';
 
-  rows.forEach(row => {
-    const v = key => getVal(row, key) || '\u2014';
+  getSortedRows().forEach(row => {
+    const v = key => getVal(row, key) || '—';
     const parts = [];
-    if (v('month') !== '\u2014') parts.push(v('month'));
-    if (v('day') !== '\u2014') parts.push(v('day'));
-    if (v('startTime') !== '\u2014') parts.push(v('startTime') + ' - ' + v('endTime'));
-    if (v('timezone') !== '\u2014') parts.push(v('timezone'));
-    const startEnd = parts.length ? parts.join(' ') : '\u2014';
+    if (v('month') !== '—') parts.push(v('month'));
+    if (v('day')   !== '—') parts.push(v('day'));
+    if (v('startTime') !== '—') parts.push(v('startTime') + ' - ' + v('endTime'));
+    if (v('timezone')  !== '—') parts.push(v('timezone'));
+    const startEnd = parts.length ? parts.join(' ') : '—';
 
-    body += '\nProject #: ' + v('projectId') + '\n';
-    body += '# of Participants: ' + v('participants') + '\n';
-    body += '# of DOs (if needed): ' + v('numDOs') + '\n';
-    body += 'Start/ End/ Time zone: ' + startEnd + '\n';
-    body += 'Operator Type: ' + v('operatorType') + '\n';
-    body += 'Session Type: ' + v('sessionName') + '\n';
-    body += 'Facilitators: ' + v('facilitator') + '\n';
-    body += 'Requested by: ' + v('requester') + '\n';
-    body += 'Platform: ' + v('platform') + '\n';
+    body += '\nProject #: '          + v('projectId')    + '\n';
+    body += '# of Participants: '     + v('participants') + '\n';
+    body += '# of DOs (if needed): ' + v('numDOs')       + '\n';
+    body += 'Start/ End/ Time zone: '+ startEnd           + '\n';
+    body += 'Operator Type: '         + v('operatorType') + '\n';
+    body += 'Session Type: '          + v('sessionName')  + '\n';
+    body += 'Facilitators: '          + v('facilitator')  + '\n';
+    body += 'Requested by: '          + v('requester')    + '\n';
+    body += 'Platform: '              + v('platform')     + '\n';
   });
 
   body += '\nThank you!\n\nAll the best,\n' + sender;
   return body;
 }
 
-// ── Generate & render ─────────────────────────────────────────────────
+// ============================================================
+// GENERATE & RENDER EMAIL
+// ============================================================
 function generateEmail() {
   readMapping();
   const client    = document.getElementById('clientName').value.trim()  || '[Client Name]';
@@ -602,7 +500,7 @@ function generateEmail() {
   const bodyEl = document.getElementById('emailBody');
   bodyEl.innerHTML = '';
 
-  const SESSION_STARTS = ['Project #:', '# of Participants:', '# of DOs', 'Start/ End/', 'Operator Type:', 'Session Type:', 'Facilitators:', 'Requested by:', 'Platform:'];
+  const SESSION_STARTS = ['Project #:','# of Participants:','# of DOs','Start/ End/','Operator Type:','Session Type:','Facilitators:','Requested by:','Platform:'];
   const isField = line => SESSION_STARTS.some(k => line.startsWith(k));
 
   const lines = plain.split('\n');
@@ -628,7 +526,9 @@ function generateEmail() {
   document.getElementById('email-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// ── Copy ──────────────────────────────────────────────────────────────
+// ============================================================
+// COPY & RESET
+// ============================================================
 function copyEmail() {
   readMapping();
   const text = buildPlain();
@@ -643,8 +543,7 @@ function copyEmail() {
 }
 
 function copySubject() {
-  const text = document.getElementById('emailSubject').textContent;
-  navigator.clipboard.writeText(text)
+  navigator.clipboard.writeText(document.getElementById('emailSubject').textContent)
     .then(() => showToast('Subject line copied!'))
     .catch(() => showToast('Please copy the subject manually.'));
 }
@@ -658,4 +557,11 @@ function resetAll() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── Toast ───────────�
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+</script>
+</body>
+</html>
